@@ -1,0 +1,6 @@
+{
+    "name": "com.uchechilaka.docfactory",
+    "dependencies": {
+        "angular": "*"
+    }
+}

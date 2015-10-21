@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Using DocFactory</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- AngularJS -->
+        <script src="libs/angular/angular.min.js"></script>
+    </head>
+    <body ng-app="docfactoryExample">
+
+        <div ng-controller="ExampleCtrl">
+            <h1>Hello DocFactory!</h1>
+            <div>This shows an example usage of the DocFactory API for 2D Barcodes.</div>
+
+            <table>
+                <tr>
+                    <td style="width: 50%; text-align: left;">
+                        <h2>PDF417</h2>
+                        <!-- Using custom HTML tag syntax -->
+                        <ng-docfactory scannable-code="pdf417code"></ng-docfactory>
+                    </td>
+                    <td style="text-align: right;">
+                        <!-- Using alternative syntax -->
+                        <h2>FANCY QR (Also showing without scope dependency)</h2>
+                        <div ng-docfactory scannable-code="{ codeType: 'FANCYQR', size: 5, rgb: '255,20,147', content: 'https://larcity.com/?codetype=FANCYQR' }" ng-docfactory></div>
+                    </td>
+                </tr>
+            </table>
+
+
+
+        </div>
+
+        <!--AngularJS Directive -->
+        <script src="docfactory.js"></script>
+        <!-- App Module + Controller -->
+        <script src="example.js"></script>
+    </body>
+</html>
